@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- CHANGE: page title (shows in the browser tab and link previews) -->
+<title>Bridget &amp; Joshua– Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Pinyon+Script&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+
+<!-- ============ 1. COVER (separate screen, opens into the main page) ============ -->
+<section id="cover" aria-label="Invitation cover">
+  <div class="card">
+    <img class="fl tl" src="assets/flower-top-left.png" alt="">
+    <img class="fl br" src="assets/flower-bottom-right.png" alt="">
+
+    <div class="heart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.3-8-11.2C4 6.6 6.4 5 8.6 5c1.5 0 2.7.8 3.4 2 .7-1.2 1.9-2 3.4-2C17.6 5 20 6.6 20 9.8 20 15.7 12 21 12 21z"/></svg>
+    </div>
+
+    <!-- CHANGE: names and date -->
+    <p class="c-name">king AJ</p>
+    <p class="c-amp">&amp;</p>
+    <p class="c-name">Bridget</p>
+    <div class="rule"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-5.3-8-11.2C4 6.6 6.4 5 8.6 5c1.5 0 2.7.8 3.4 2 .7-1.2 1.9-2 3.4-2C17.6 5 20 6.6 20 9.8 20 15.7 12 21 12 21z"/></svg></div>
+    <p class="c-date">December 30, 2026</p>
+    <p class="c-line">We cordially invite you to our wedding</p>
+
+    <button class="open" id="openBtn" type="button">Open</button>
+  </div>
+</section>
+
+<!-- ============ 2. MAIN PAGE (one long scrolling page) ============ -->
+<main>
+  <svg class="arch" viewBox="0 0 400 400" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#5a3a30" stroke-width="1.2" aria-hidden="true">
+    <path d="M20 400V210M380 400V210M20 210H380M20 210L200 120L380 210M60 400V220M110 400V220M160 400V220M240 400V220M290 400V220M340 400V220M150 150h100M170 135h60M200 120v-40M185 80q15-35 30 0"/>
+    <path d="M30 230h340M30 250h340M30 400h340"/>
+  </svg>
+
+  <!-- Section: Save the date -->
+  <p class="std">SAVE THE DATE</p>
+  <div class="env">
+    <!-- CHANGE: replace assets/envelope-photo.png with your own image (transparent PNG works best) -->
+    <img id="envImg" src="assets/envelope-photo.png" alt="Photo of the couple in a wine-red envelope">
+  </div>
+
+  <!-- Section: Names -->
+  <div class="names">
+    <span class="amp" aria-hidden="true">&amp;</span>
+    <h1>Bridget<br>king AJ</h1>
+  </div>
+
+  <!-- Section: Invitation card (procession + names + ceremony) -->
+  <section class="wine" aria-labelledby="proc-title">
+    <h2 id="proc-title">Wedding Procession</h2>
+    <div class="cols">
+      <div class="col">
+        <small>(Pastors)  &amp; Mrs.</small>
+        <b>Daddy AJ Atairoro</b>
+        <b>Mummy AJ Atairoro</b>
+      </div>
+      <hr>
+      <div class="col">
+        <small>Mr. &amp; Mrs.</small>
+        <b>Daddy Kumba Gbamanja</b>
+        <b>Mummy Kumba Gbamanja</b>
+      </div>
+    </div>
+
+    <div class="story">
+      <img class="side-fl r" src="assets/flower-right.png" alt="">
+      <p class="announce">We joyfully announce the wedding of our children</p>
+
+      <!-- CHANGE: full names -->
+      <p class="full-name">Kumba Bridget Gbamanja</p>
+      <p class="role">Bride</p>
+      <p class="amp2">&amp;</p>
+      <p class="full-name">Atairoro Joshua</p>
+      <p class="role">Groom</p>
+
+      <!-- Event 1 -->
+      <h3 class="event">White Wedding Ceremony</h3>
+      <div class="when">
+        <div class="top"><span>At 09:00</span><span>Friday</span></div>
+        <div class="dmy"><b class="day">24</b><i></i><span class="my"><b>April</b><span>2027</span></span></div>
+      </div>
+
+     
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Photo gallery (slides are built by script.js from assets/gallery/01.jpg ... ) -->
+  <section class="gallery has-arch" id="gallery" aria-labelledby="gal-title">
+    <h2 id="gal-title">Photo Gallery</h2>
+    <div class="cf" id="cf" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Photo gallery"></div>
+    <p class="cf-count" id="cfCount" aria-live="polite"></p>
+  </section>
+
+  <!-- Section: Reception info -->
+  <section class="wine reception" aria-labelledby="rec-title">
+    <img class="side-fl l" src="assets/flower-left.png" alt="">
+    <h2 id="rec-title">Reception Info</h2>
+    <p class="announce">The reception will take place at:</p>
+    <div class="when">
+      <div class="top"><span>16:30</span><span>Friday</span></div>
+      <div class="dmy"><b class="day">30</b><i></i><span class="my"><b>April</b><span>2027</span></span></div>
+    </div>
+
+    <p class="cd-label">Countdown</p>
+    <!-- CHANGE: target date/time (include timezone; +01:00 = Nigeria) -->
+    <p class="cd" id="countdown" data-target="2027-04-30T16:30:00+01:00">&nbsp;</p>
+
+    <!-- CHANGE: calendar month shown + highlighted day (YYYY-MM-DD) -->
+    <div class="cal" id="calendar" data-date="2027-04-30"></div>
+
+    <a href="#" class="add-cal" id="addCal">Add to Calendar</a>
+    <!-- CHANGE: href = your RSVP link (WhatsApp, Google Form, etc.), e.g. https://wa.me/234XXXXXXXXXX -->
+    <a href="#" class="confirm" id="rsvp">Confirm Attendance</a>
+  </section>
+
+  <!-- Section: Venue -->
+  <section class="plain has-arch" aria-labelledby="venue-title">
+    <h2 id="venue-title">Wedding and Reception Venue</h2>
+    <!-- CHANGE: place name (also in the map link below) -->
+    <p class="sub">Port-Harcour, Nigeria</p>
+    <div class="map">
+      <iframe title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=j's%20signatures%20Hotel%2CPort-harcourt%20Nigeria&amp;output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Section: Dress code -->
+  <section class="plain has-arch" aria-labelledby="dress-title">
+    <h2 id="dress-title">Dress Code</h2>
+    <p class="dress-main">Dress to impress</p>
+    <p class="dress-note">No asoebi will be provided, please see colours of the day below 🙏🏾</p>
+    <!-- CHANGE: colours of the day -->
+    <div class="swatches" aria-label="Colours of the day">
+      <span style="background:#e5a10a"></span><span style="background:#e58868"></span><span style="background:#6f4427"></span>
+      <span style="background:#d8c3a5"></span><span style="background:#a8b89f"></span>
+    </div>
+  </section>
+
+  <!-- Section: Guestbook -->
+  <section class="plain guest has-arch" aria-labelledby="gb-title">
+    <div class="gb-card">
+      <img class="gb-fl" src="assets/flower-top-left.png" alt="">
+      <h2 id="gb-title">Guestbook</h2>
+      <form id="gbForm" novalidate>
+        <input id="gbName" type="text" placeholder="Enter your name*" maxlength="60" autocomplete="name" aria-label="Your name">
+        <textarea id="gbMsg" placeholder="Enter your wishes*" maxlength="600" rows="2" aria-label="Your wishes"></textarea>
+        <input id="gbHp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="gb-actions">
+          <button type="button" class="wand" id="gbWand" aria-label="Suggest a wish" title="Suggest a wish">🪄</button>
+          <button type="submit" class="send">Send wishes</button>
+        </div>
+      </form>
+    </div>
+    <div class="gb-list" id="gbList" tabindex="0" aria-label="Guest wishes"></div>
+  </section>
+
+  <!-- Section: Monetary gifts -->
+  <section class="plain gifts has-arch" aria-labelledby="gift-title">
+    <h2 id="gift-title">Monetary Gifts</h2>
+    <button type="button" class="gift-btn" id="giftBtn" aria-haspopup="dialog">
+      <img src="assets/gift-envelopes.png" alt="Two red floral gift envelopes">
+    </button>
+    <p class="tap">Tap to open</p>
+  </section>
+
+  <!-- CHANGE: bank details shown when the envelopes are tapped -->
+  <dialog id="giftDlg" aria-labelledby="gift-dlg-title">
+    <h3 id="gift-dlg-title">With love, thank you</h3>
+    <dl>
+      <dt>Account name</dt><dd><span>Account Name</span></dd>
+      <dt>Bank</dt><dd><span>Bank Name</span></dd>
+      <dt>Account number</dt><dd><span id="acctNo">0000000000</span> <button type="button" id="copyAcct">Copy</button></dd>
+    </dl>
+    <button type="button" class="close" id="giftClose">Close</button>
+  </dialog>
+
+
+   <!-- RSVP popup (opens from "Confirm Attendance") -->
+  <dialog id="rsvpDlg" aria-labelledby="rsvp-title">
+    <button type="button" class="rsvp-x" id="rsvpClose" aria-label="Close">✕</button>
+    <div id="rsvpMain">
+      <h3 id="rsvp-title">Confirm your attendance</h3>
+      <p class="rsvp-sub">Your presence would be an honor. Please RSVP so we can prepare the warmest welcome for you.</p>
+      <form id="rsvpForm" novalidate>
+        <label for="rsvpName">Your name</label>
+        <input id="rsvpName" type="text" placeholder="Enter your name" maxlength="60" autocomplete="name">
+        <label for="rsvpEmail">Email address</label>
+        <input id="rsvpEmail" type="email" placeholder="you@example.com" maxlength="120" autocomplete="email" inputmode="email">
+        <label for="rsvpPhone">WhatsApp number</label>
+        <input id="rsvpPhone" type="tel" placeholder="+234 801 234 5678" maxlength="30" autocomplete="tel" inputmode="tel">
+        <p class="hint">Enter at least one. A confirmation email is sent automatically to the email address.</p>
+        <input id="rsvpHp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <p class="q" id="rsvpQ">Will you attend?</p>
+        <div role="radiogroup" aria-labelledby="rsvpQ">
+          <button type="button" class="opt" role="radio" aria-checked="false" data-v="yes"><span class="ic">✓</span>I will attend</button>
+          <button type="button" class="opt" role="radio" aria-checked="false" data-v="no"><span class="ic">✕</span>Sorry, I can’t make it</button>
+        </div>
+        <button type="submit" class="rsvp-go" id="rsvpGo" disabled>Confirm</button>
+      </form>
+    </div>
+    <div class="done" id="rsvpDone" hidden>
+      <h3 id="rsvpThanks"></h3>
+      <p class="rsvp-sub" id="rsvpThanksMsg"></p>
+      <a class="rsvp-go" id="rsvpWa" href="#" target="_blank" rel="noopener" hidden>Message us on WhatsApp</a>
+      <button type="button" class="rsvp-go" id="rsvpOk">Close</button>
+    </div>
+  </dialog>
+
+</main>
+
+<!-- Music: put your song at assets/music.mp3 -->
+<audio id="song" src="assets/music.mp3.mp3" loop preload="none"></audio>
+<button id="music" type="button" aria-label="Play or pause music" aria-pressed="false">
+  <span class="bars"><i></i><i></i><i></i></span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
